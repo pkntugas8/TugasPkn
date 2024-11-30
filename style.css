@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+img{
+  width:720px; 
+  height:250px;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -104,6 +109,10 @@ footer p {
   @media (max-width: 480px) {
     header h1 {
       font-size: 18px;
+    }
+    img {
+      width:250px; 
+      height:120px;
     }
   
     nav ul li a {
