@@ -7,7 +7,7 @@
 
 /* Gaya opsional untuk pembatas */
 .responsive-img-container {
-    max-width: 500px; /* Batas maksimum untuk gambar */
+    max-width: 700px; /* Batas maksimum untuk gambar */
     margin: 0 auto; /* Menengahkan container gambar */
     overflow: hidden; /* Pastikan elemen berlebih tersembunyi */
 }
