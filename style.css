@@ -1,132 +1,181 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ img {
+    max-width: 100%; /* Membatasi lebar maksimum gambar hingga 100% dari elemen induknya */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghapus margin bawaan untuk gambar */
+    margin: 0 auto; /* Menengahkan gambar jika diperlukan */
 }
 
-img{
-  width:720px; 
-  height:250px;
+/* Gaya opsional untuk pembatas */
+.responsive-img-container {
+    max-width: 500px; /* Batas maksimum untuk gambar */
+    margin: 0 auto; /* Menengahkan container gambar */
+    overflow: hidden; /* Pastikan elemen berlebih tersembunyi */
 }
-
-html{
-  scroll-behavior: smooth;
-}
-
+/* Style dasar */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-header {
-    background-color:  firebrick;
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-}
-
-header h1 {
-    font-size: 2.5em;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: #ffcc00;
-}
-
-.section {
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: rgb(54, 59, 138);
-}
-
-ul {
-    list-style-type: square;
-    margin-left: 20px;
-
-    padding:20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
+/* Navbar */
+.navbar {
     background-color: #333;
     color: white;
+    padding: 10px 15px;
+    text-align: center;
 }
 
-footer p {
-    font-size: 1em;
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap; /* Membuat item baris baru jika layar kecil */
+    justify-content: center;
+}
 
-@media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-      img {
-      width:250px; 
-      height:120px;
-    }
+.navbar nav ul li {
+    margin: 5px 10px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Halaman konten */
+.page {
+    display: none; /* Default: sembunyikan semua halaman */
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ruang untuk menghindari footer menutupi teks */
+.page:last-child {
+    margin-bottom: 80px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+}
+
+/* Media Queries untuk Responsivitas */
+@media screen and (max-width: 768px) {
+
+img {
+    max-width: 100%; /* Membatasi lebar maksimum gambar hingga 100% dari elemen induknya */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghapus margin bawaan untuk gambar */
+    margin: 0 auto; /* Menengahkan gambar jika diperlukan */
+}
+
+/* Gaya opsional untuk pembatas */
+.responsive-img-container {
+    max-width: 500px; /* Batas maksimum untuk gambar */
+    margin: 0 auto; /* Menengahkan container gambar */
+    overflow: hidden; /* Pastikan elemen berlebih tersembunyi */
+}
   
-    nav ul li {
-      margin: 5px 0;
+    .navbar h1 {
+        font-size: 1.2rem; /* Perkecil ukuran teks di navbar */
     }
-  
-    main {
-      padding: 10px;
+
+    .navbar nav ul li a {
+        font-size: 0.8rem; /* Perkecil teks menu */
     }
-  }
-  
-  /* Responsif untuk perangkat dengan lebar layar kurang dari 480px (Mobile sangat kecil) */
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 18px;
+
+    .page {
+        margin: 15px; /* Perkecil margin */
+        padding: 15px; /* Perkecil padding */
     }
-    img {
-      width:250px; 
-      height:120px;
-    }
-  
-    nav ul li a {
-      font-size: 14px;
-      padding: 5px 10px;
-      flex-direction: column;
-      align-items: center;
-    }
-  
+
     footer {
-      padding: 5px;
+        font-size: 0.8rem; /* Perkecil teks footer */
     }
-  }
+}
+
+@media screen and (max-width: 480px) {
+
+img {
+    max-width: 100%; /* Membatasi lebar maksimum gambar hingga 100% dari elemen induknya */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghapus margin bawaan untuk gambar */
+    margin: 0 auto; /* Menengahkan gambar jika diperlukan */
+}
+
+/* Gaya opsional untuk pembatas */
+.responsive-img-container {
+    max-width: 500px; /* Batas maksimum untuk gambar */
+    margin: 0 auto; /* Menengahkan container gambar */
+    overflow: hidden; /* Pastikan elemen berlebih tersembunyi */
+}
+  
+    .navbar h1 {
+        font-size: 1rem; /* Teks lebih kecil untuk layar sangat kecil */
+    }
+
+    .navbar nav ul {
+        flex-direction: column; /* Susun menu secara vertikal */
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0; /* Beri jarak antar menu */
+    }
+
+    .page {
+        margin: 10px; /* Margin lebih kecil */
+        padding: 10px; /* Padding lebih kecil */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Teks footer lebih kecil */
+        padding: 8px; /* Padding footer lebih kecil */
+    }
+}
+
+/* Style untuk setiap halaman */
+.page {
+    display: none; /* Default: sembunyikan semua halaman */
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Tambahkan ruang untuk menghindari footer menutupi teks */
+.page:last-child {
+    margin-bottom: 60px;
+}
+
+/* Style untuk footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
